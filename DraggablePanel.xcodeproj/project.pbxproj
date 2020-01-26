@@ -13,7 +13,6 @@
 		4BF4D0121EED972000EEBFCB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4D0111EED972000EEBFCB /* Assets.xcassets */; };
 		4BF4D0151EED972000EEBFCB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4D0131EED972000EEBFCB /* LaunchScreen.storyboard */; };
 		4BF4D01D1EED976D00EEBFCB /* DraggablePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BF4D01C1EED976D00EEBFCB /* DraggablePanelViewController.swift */; };
-		4BF4D01F1EED978300EEBFCB /* DraggablePanelViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4BF4D01E1EED978300EEBFCB /* DraggablePanelViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +24,6 @@
 		4BF4D0141EED972000EEBFCB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4BF4D0161EED972000EEBFCB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4BF4D01C1EED976D00EEBFCB /* DraggablePanelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggablePanelViewController.swift; sourceTree = "<group>"; };
-		4BF4D01E1EED978300EEBFCB /* DraggablePanelViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DraggablePanelViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +60,6 @@
 				4BF4D00C1EED972000EEBFCB /* ViewController.swift */,
 				4BF4D00E1EED972000EEBFCB /* Main.storyboard */,
 				4BF4D01C1EED976D00EEBFCB /* DraggablePanelViewController.swift */,
-				4BF4D01E1EED978300EEBFCB /* DraggablePanelViewController.storyboard */,
 				4BF4D0111EED972000EEBFCB /* Assets.xcassets */,
 				4BF4D0131EED972000EEBFCB /* LaunchScreen.storyboard */,
 				4BF4D0161EED972000EEBFCB /* Info.plist */,
@@ -132,7 +129,6 @@
 			files = (
 				4BF4D0151EED972000EEBFCB /* LaunchScreen.storyboard in Resources */,
 				4BF4D0121EED972000EEBFCB /* Assets.xcassets in Resources */,
-				4BF4D01F1EED978300EEBFCB /* DraggablePanelViewController.storyboard in Resources */,
 				4BF4D0101EED972000EEBFCB /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

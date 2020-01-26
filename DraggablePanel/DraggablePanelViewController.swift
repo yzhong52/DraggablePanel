@@ -20,14 +20,13 @@ class DraggablePanelViewController : UIViewController {
             case .partial:
                 return CGPoint.init(x: 0, y: UIScreen.main.bounds.height / 2)
             case .full:
-                return CGPoint.init(x: 0, y: UIApplication.shared.statusBarFrame.size.height)
+                return CGPoint.init(x: 0, y: 0)
             }
         }
     }
     
-    static func loadFromStoryboard() -> DraggablePanelViewController {
-        let storyboard = UIStoryboard.init(name: "DraggablePanelViewController", bundle: nil)
-        return storyboard.instantiateViewController(withIdentifier: "DraggablePanelViewController") as! DraggablePanelViewController
+    static func create() -> DraggablePanelViewController {
+        return DraggablePanelViewController()
     }
     
     private let fullView: CGFloat = ExpandState.full.origin.y
@@ -53,19 +52,21 @@ class DraggablePanelViewController : UIViewController {
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOffset = CGSize(width: 3, height: 3)
         view.layer.shadowOpacity = 0.7
-        view.layer.shadowRadius = 4.0
+        view.layer.shadowRadius = 10.0
+
+        view.backgroundColor = .yellow
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        UIView.animate(withDuration: 0.6,
-                       delay: 0.0,
-                       usingSpringWithDamping: 0.9,
-                       initialSpringVelocity: 10,
-                       options: .allowUserInteraction,
-                       animations:
-            {
+
+        UIView.animate(
+            withDuration: 0.6,
+            delay: 0.0,
+            usingSpringWithDamping: 0.9,
+            initialSpringVelocity: 10,
+            options: .allowUserInteraction,
+            animations: {
                 self.view.frame = self.frame(for: ExpandState.collapse)
         })
     }
@@ -103,16 +104,20 @@ class DraggablePanelViewController : UIViewController {
                 }
             }
             
-            UIView.animate(withDuration: 0.5,
-                           delay: 0.0,
-                           usingSpringWithDamping: 0.8,
-                           initialSpringVelocity: 4.0,
-                           options: .allowUserInteraction,
-                           animations: {
+            UIView.animate(
+                withDuration: 0.5,
+                delay: 0.0,
+                usingSpringWithDamping: 0.8,
+                initialSpringVelocity: 4.0,
+                options: .allowUserInteraction,
+                animations: {
                     self.view.frame = newFrame
             })
-        default:
-            print("unhandled")
+        case .possible, .cancelled, .failed:
+            // Not needed
+            break
+        @unknown default:
+            break
         }
     }
 }

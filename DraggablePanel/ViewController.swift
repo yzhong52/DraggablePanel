@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let draggablePanelViewController = DraggablePanelViewController.loadFromStoryboard()
+        let draggablePanelViewController = DraggablePanelViewController.create()
      
         self.addChild(draggablePanelViewController)
         self.view.addSubview(draggablePanelViewController.view)
