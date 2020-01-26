@@ -70,7 +70,7 @@ class DraggablePanelViewController : UIViewController {
         })
     }
 
-    func panGesture(_ recognizer: UIPanGestureRecognizer) {
+    @objc func panGesture(_ recognizer: UIPanGestureRecognizer) {
         let translation = recognizer.translation(in: view)
         let velocity = recognizer.velocity(in: view)
         

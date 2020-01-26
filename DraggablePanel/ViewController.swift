@@ -14,9 +14,9 @@ class ViewController: UIViewController {
         
         let draggablePanelViewController = DraggablePanelViewController.loadFromStoryboard()
      
-        self.addChildViewController(draggablePanelViewController)
+        self.addChild(draggablePanelViewController)
         self.view.addSubview(draggablePanelViewController.view)
-        draggablePanelViewController.didMove(toParentViewController: self)
+        draggablePanelViewController.didMove(toParent: self)
         
         let height = view.frame.height
         let width  = view.frame.width
